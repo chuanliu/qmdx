@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ <!-- 告诉系统  我的bean 让spring来管理 -->
+    <constant name="struts.objectFactory" value="spring"></constant>
+    <package name="logining" extends="struts-default" namespace="/">
+    <action name="login2" class="LoginAction" method="userLogin">
+    <result name="input">/userlogin.jsp</result>
+    <result name="success">/index.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    <action name="login1" class="LoginAction" method="manuserLogin">
+    <result name="input">/login.jsp</result>
+    <result name="success">/index.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    </package>
+ 
+    <package name="bookman" extends="struts-default" namespace="/">
+    <action name="addbook" class="AddAction" method="addBook">
+    <result name="input">/index.jsp</result>
+    <result name="success">/success.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    <action name="check" class="checkAction" method="listBook">
+    <result name="input">/index.jsp</result>
+    <result name="success">/bookmessage.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    </package>
+    
+    <package name="findbook" extends="struts-default" namespace="/">
+    <action name="seacrch" class="SearchAction" method="findByBookAuthor">
+    <result name="input">/index.jsp</result>
+    <result name="success">/searchauthor.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    
+    <action name="searchpublish" class="SearchAction" method="findByBookPublish">
+     <result name="input">/index.jsp</result>
+    <result name="success">/searchchuban.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    
+    <action name="searchcontent" class="SearchAction" method="findByBookContent">
+    <result name="input">/index.jsp</result>
+    <result name="success">/searchcontent.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    
+    <action name="searchname" class="SearchAction" method="findByBookName">
+    <result name="input">/index.jsp</result>
+    <result name="success">/searchname.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    
+     <action name="searchtype" class="SearchAction" method="findByBookType">
+    <result name="input">/index.jsp</result>
+    <result name="success">/searchtype.jsp</result>
+    <result name="error">/error.jsp</result>
+    </action>
+    </package>
+    
+    
+</struts>    
