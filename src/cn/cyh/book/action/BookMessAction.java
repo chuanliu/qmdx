@@ -14,9 +14,11 @@ public class BookMessAction extends ActionSupport{
 	private String publish;
 	private String content;
 	private IBookDAO bdao=null;
+
 	private List<Book> bo;
 	private String Jack;
 	private String test;
+
 
 	public List<Book> getBo() {
 		return bo;
